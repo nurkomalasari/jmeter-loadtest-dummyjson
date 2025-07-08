@@ -28,6 +28,7 @@ jobs:
       - name: Run JMeter test
         run: |
           rm -rf report
+          rm -f results.jtl
           jmeter/bin/jmeter -n -t "Request Load Test.jmx" -l results.jtl -e -o report
 
       - name: Upload test report
