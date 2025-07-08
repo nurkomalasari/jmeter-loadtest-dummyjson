@@ -29,7 +29,8 @@ jobs:
         jmeter/bin/jmeter -n -t "Request_Load_Test.jmx" -l results.jtl -e -o report
 
     - name: Upload test report
-      uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
+
       with:
         name: jmeter-report
         path: report/
